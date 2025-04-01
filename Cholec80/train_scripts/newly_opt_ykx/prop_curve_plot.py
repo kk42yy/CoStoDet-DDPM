@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 join = os.path.join
 
-basedir = "/memory/yangkaixiang/SurgicalSceneUnderstanding/pitfalls_bn/output/predictions/phase/20240701-1706_trial_cuhknotestSplit_lstm_convnextv2_lr0.0001_bs1_seq256_frozen/Corr1-256"
+basedir = ""
 save_dir = join(basedir, 'best_clip_length_long')
 os.makedirs(save_dir, exist_ok=True)
 

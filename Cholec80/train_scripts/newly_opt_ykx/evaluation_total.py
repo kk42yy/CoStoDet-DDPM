@@ -63,7 +63,7 @@ def evaluate_allmetric(gtp, predp, savep):
         f.write(log_message)
 
 if __name__ == "__main__":
-    gtp = "/memory/yangkaixiang/SurgicalSceneUnderstanding/pitfalls_bn/output/predictions/phase/20240726-2047_LongShort_maxca_klwhole_cuhk4040Split_lstm_convnextv2_lr1e-05_bs1_seq64_e2e/gt"
-    predp = "/memory/yangkaixiang/SurgicalSceneUnderstanding/pitfalls_bn/output/predictions/phase/20241128-2042_DDPM_DACAT_woema_1e-5_lstmlinearFREEZE_cuhk4040Split_lstm_convnextv2_bs1_seq64_e2e_CHT/pred_1e-5_1e-6"
+    gtp = ""
+    predp = ""
     savep = predp + "/metric.txt"
     evaluate_allmetric(gtp, predp, savep)
