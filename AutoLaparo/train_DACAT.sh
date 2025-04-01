@@ -2,6 +2,12 @@ export CUDA_VISIBLE_DEVICES=0
 
 cd .../AutoLaparo/train_scripts
 
+### BNPifalls (Training feature cache) for AutoLaparo
+# python3 train.py phase \
+# 	--split cuhk1007 \
+# 	--trial_name Step1 \
+# 	--backbone convnextv2 --freeze --workers 4 --seq_len 256 --lr 5e-4
+
 ### CoStoDet-DDPM
 python3 train_phase_DDPM_DACAT.py phase \
     --split cuhk1007 --trial_name CoStoDet-DDPM \

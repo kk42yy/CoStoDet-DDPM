@@ -4,7 +4,7 @@ export CUDA_VISIBLE_DEVICES=0
 
 cd .../Cholec80/train_scripts
 
-### BNPifalls
+### BNPifalls (i.e., Training feature cache)
 # python3 train.py phase \
 #     --split cuhk4040 \
 #     --trial_name BNPitfall4040 \
