@@ -133,6 +133,7 @@ Use the [Python file](AutoLaparo/train_scripts/newly_opt_ykx/evaluation_total.py
 ## Reference
 * [BNPitfalls (MIA 24)](https://gitlab.com/nct_tso_public/pitfalls_bn)
 * [DACAT (ICASSP 25)](https://github.com/kk42yy/DACAT)
+* [Diffusion Policy (IJRR 24)](https://diffusion-policy.cs.columbia.edu)
 
 # Citations
 If you find this repository useful, please consider citing our paper:
