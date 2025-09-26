@@ -84,9 +84,9 @@ source .../Cholec80/train_anti.sh
 ```bash
 ### BNPifalls (Training feature cache) for Cholec80
 python3 train.py phase \
-    --split cuhk4040 \
-    --trial_name BNPitfall4040 \
-    --backbone convnext --freeze --workers 4 --seq_len 256 --lr 1e-4
+	--split cuhk4040 \
+	--trial_name BNPitfall4040 \
+	--backbone convnext --freeze --workers 4 --seq_len 256 --lr 1e-4
 
 ### BNPifalls (Training feature cache) for AutoLaparo
 python3 train.py phase \
@@ -97,7 +97,7 @@ python3 train.py phase \
 
 After training, please rename and save the checkpoint `.../output/checkpoints/phase/YourTrainNameXXX/models/checkpoint_best_acc.pth.tar` in `.../[DATASET]/train_scripts/newly_opt_ykx/LongShortNet/long_net_convnextv2.pth.tar`.
 
-#### We also released this stage models at [TrainingRequirement](https://huggingface.co/kk42yy/CoStoDet-DDPM/tree/main/Recognition/TrainingRequirement) for Cholec80 and AutoLaparo.
+#### We also released this stage models at [TrainingRequirement](https://huggingface.co/kk42yy/CoStoDet-DDPM/tree/main/Recognition/TrainingRequirement) for Cholec80, AutoLaparo and CATARACTS.
 
 #### 2.2.2 Train CoStoDet-DDPM
 ```bash
@@ -106,6 +106,9 @@ source .../Cholec80/train_DACAT.sh
 
 ### AutoLaparo
 source .../AutoLaparo/train_DACAT.sh
+
+### CATARACTS
+source .../CATARACTS/train_DACAT.sh
 ```
 
 ## 3. Infer
@@ -119,18 +122,25 @@ source .../Cholec80/predict_anti.sh
 ### Recognition
 source .../Cholec80/predict.sh
 source .../AutoLaparo/predict.sh
+source .../CATARACTS/predict.sh
 ```
 
 
 ## 4. Evaluate
 
 ### 4.1 Cholec80
-Use the [Python file](Cholec80/train_scripts/newly_opt_ykx/evaluation_total.py/#L66).
+`Anticipation`: Use the [Python file](Cholec80/train_scripts_anti/evaluation_scripts/test_scores_all_phase_anti.py/#L121).
+
+`Recognition`: Use the [Python file](Cholec80/train_scripts/newly_opt_ykx/evaluation_total.py/#L66).
 
 ### 4.2 AutoLaparo
-Use the [Python file](AutoLaparo/train_scripts/newly_opt_ykx/evaluation_total.py/#L66).
+`Recognition`: Use the [Python file](AutoLaparo/train_scripts/newly_opt_ykx/evaluation_total.py/#L66).
+
+### 4.3 CATARACTS
+`Recognition`: Use the [Python file](CATARACTS/train_scripts/newly_opt_ykx/evaluation_total.py/#L66).
 
 ## Reference
+* [IIA-Net (MIA 22)](https://github.com/Flaick/Surgical-Workflow-Anticipation)
 * [BNPitfalls (MIA 24)](https://gitlab.com/nct_tso_public/pitfalls_bn)
 * [DACAT (ICASSP 25)](https://github.com/kk42yy/DACAT)
 * [Diffusion Policy (IJRR 24)](https://diffusion-policy.cs.columbia.edu)
