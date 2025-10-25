@@ -8,7 +8,7 @@ CoStoDet-DDPM: Collaborative Training of Stochastic and Deterministic Models Imp
 <details>
 <summary>Download the Cholec80, AutoLaparo</summary>
 
-- Access can be requested [Cholec80](http://camma.u-strasbg.fr/datasets), [AutoLaparo](https://autolaparo.github.io/).
+- Access can be requested [Cholec80](http://camma.u-strasbg.fr/datasets), [AutoLaparo](https://autolaparo.github.io/), [CATARACTS](https://ieee-dataport.org/open-access/cataracts).
 - Download the videos for each datasets and extract frames at 1fps. E.g. for `video01.mp4` with ffmpeg, run:
 ```bash
 mkdir /<PATH_TO_THIS_FOLDER>/data/frames_1fps/01/
