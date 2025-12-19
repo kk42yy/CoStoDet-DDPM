@@ -67,7 +67,7 @@ Cholec80/
 <summary>Environment Requirements</summary>
 
 
-See [requirements.txt](requirements.txt).
+See [requirements.txt](Cholec80/requirements.txt).
 
 </details>
 
